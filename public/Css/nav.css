@@ -1,0 +1,152 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+nav {
+  background-color: rgba(0, 48, 90, 0.6);
+  padding: 1rem;
+  position: relative;
+  z-index: 1000;
+}
+.logo {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(78, 205, 196, 0.7);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.nav-item > a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item:hover > a,
+.nav-item:hover {
+  color: #4ecdc4;
+  text-shadow: 0 0 10px rgba(78, 205, 196, 0.7);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 48, 90, 0.9);
+  padding: 0.5rem;
+  border-radius: 4px;
+  min-width: 120px;
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dropdown a:hover {
+  background-color: rgba(78, 205, 196, 0.2);
+}
+
+.signin-button {
+  background-color: #4ecdc4;
+  color: #00305a;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.signin-button:hover {
+  background-color: #45b7aa;
+  box-shadow: 0 0 15px rgba(78, 205, 196, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 48, 90, 0.9);
+    padding: 1rem;
+  }
+
+  .nav-items.active {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0;
+  }
+
+  .dropdown {
+    position: static;
+    background-color: transparent;
+    padding-left: 1rem;
+  }
+
+  .signin-button {
+    margin-top: 1rem;
+  }
+}

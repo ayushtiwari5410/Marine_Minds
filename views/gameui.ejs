@@ -1,0 +1,95 @@
+<div class="ocean-background"></div>
+<div class="bubbles"></div>
+
+<div class="container-game-ui">
+    <div class="icon-container">
+        <div class="icon">
+            <img src="/Game UI/IMG_20240916_131041.jpg" alt="Voyage of Titans" />
+        </div>
+        <a href="https://my-threejs-3d-models.s3.amazonaws.com/MarineMinds/index.html" class="button-game-ui"
+            onclick="showFlashMessage('Voyage of Titans')">Voyage of Titans</a>
+    </div>
+
+    <div class="icon-container">
+        <div class="icon">
+            <img src="/Game UI/coral defenders.jpg" alt="Submarine" />
+        </div>
+        <a href="https://my-threejs-3d-models.s3.amazonaws.com/GameDemo/index.html" class="button-game-ui"
+            onclick="showFlashMessage('Coral Defenders')">Coral Defenders</a>
+    </div>
+    <div class="icon-container">
+        <div class="icon">
+            <img src="/Game UI/Marine Fighters.png" alt="Coral" />
+        </div>
+        <a href="#" class="button-game-ui" onclick="showFlashMessage('Fisherman Survival')">Fisherman Survival</a>
+    </div>
+    <div class="icon-container">
+        <div class="icon">
+            <img src="/Game UI/Sea Food.png" alt="Food Chain" />
+        </div>
+        <a href="#" class="button-game-ui" onclick="showFlashMessage('SeaFood')">SeaFood</a>
+    </div>
+    <div class="icon-container">
+        <div class="icon">
+            <img src="/Game UI/5.png" alt="Food Chain" />
+        </div>
+        <a href="#" class="button" onclick="showFlashMessage('Nautical Navigator')">Nautical Navigator</a>
+    </div>
+    <div class="icon-container">
+        <div class="icon">
+            <img src="/Game UI/4.png" alt="Port" />
+        </div>
+        <a href="#" class="button-game-ui" onclick="showFlashMessage('Resoucre Allocation')">Resoucre Allocation</a>
+    </div>
+</div>
+
+<div class="flash-message" id="flash-message"></div>
+<div class="container">
+    <header>
+        <h1>Deep Dive: Ocean Explorer Adventure</h1>
+        <p>Embark on an immersive journey through the world's oceans!</p>
+    </header>
+
+    <main>
+        <section id="game-area" class="game-section">
+            <h2 id="mission-title">Mission: Plastic Collection</h2>
+            <div class="video-container">
+                <iframe id="main-video" src="https://www.youtube.com/embed/H3WWhWhivhE" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="video-playlist" class="game-section">
+            <h2>Ocean Discovery Missions</h2>
+            <p>Select a mission to begin your next underwater adventure!</p>
+            <div class="video-playlist">
+                <div class="video-thumbnail"
+                    onclick="changeVideo('https://www.youtube.com/embed/_urMg3zX0VQ', '3D Titan Submersible')">
+                    <img src="/Game UI/Titanic .png" alt="3D Titan Submersible">
+                    <p>3D Titan Submersible</p>
+                </div>
+                <div class="video-thumbnail"
+                    onclick="changeVideo('https://www.youtube.com/embed/6zrn4-FfbXw', 'Discover Deep Sea Creatures')">
+                    <img src="/Game UI/Fish eat Fish  Comparison  3D animation - 1280x720.jpg" alt="Deep Sea Creatures">
+                    <p>Deep Sea Creatures</p>
+                </div>
+                <div class="video-thumbnail"
+                    onclick="changeVideo('https://www.youtube.com/embed/wXStLvO-Z2w', 'Submarine Dive')">
+                    <img src="/Game UI/3.png" alt="Submarine Dive">
+                    <p>Submarine Dive</p>
+                </div>
+                <div class="video-thumbnail"
+                    onclick="changeVideo('https://www.youtube.com/embed/F3LKABYjuFU', 'Marine Biologist Gameplay')">
+                    <img src="/Game UI/Marine Biologist Gameplay.png" alt="Marine Biologist Gameplay">
+                    <p>Marine Biologist Gameplay</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<div id="mission-complete" class="hidden">
+    <h2>Mission Complete!</h2>
+    <p>Congratulations! You've successfully completed this ocean mission.</p>
+    <button onclick="closeMissionComplete()">Continue Exploring</button>
+</div>
